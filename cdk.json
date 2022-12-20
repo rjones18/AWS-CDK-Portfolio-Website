@@ -1,0 +1,13 @@
+{
+    "app": "python3 app.py",
+    "context": {
+      "namespace": "static-site",
+      "domain_name": "reggiestestdomain.com",
+      "sub_domain_name": "rjportfolio",
+      "enable_s3_website_endpoint": true,
+      "origin_custom_header_parameter_name": "/prod/static-site/origin-custom-header/referer",
+      "hosted_zone_id": "Z03743244DPHU4YSX41G",
+      "hosted_zone_name": "reggiestestdomain.com"
+ }
+}
+  
