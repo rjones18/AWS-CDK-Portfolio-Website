@@ -26,7 +26,7 @@ class StaticSiteStack(Stack):
         # Reference Route 53 DNS Zone
         zone = aws_route53.HostedZone.from_hosted_zone_attributes(self, "MyZone",
         zone_name="reggiestestdomain.com",
-        hosted_zone_id="Z03743244DPHU4YSX41G"
+        hosted_zone_id="XXXXXXXXXX"
 )
 
         #Create Certificate for SSL
