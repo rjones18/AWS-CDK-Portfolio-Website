@@ -15,6 +15,9 @@ class PortfolioPipelineStack(Stack):
         repo = codecommit.Repository(
             self, "Portfolio-Website", repository_name="Portfolio-Website-Pipeline"
         )
+
+        secret_name = "snyk-key"
+        snyk_secret = Secret.from_secret_name_v2(self, "ExistingSecretByName", secret_name)
         
         pipeline = pipelines.CodePipeline(
             self,
@@ -24,9 +27,15 @@ class PortfolioPipelineStack(Stack):
                 input=pipelines.CodePipelineSource.code_commit(repo, "master"),
                 commands=[
                     "npm install -g aws-cdk",  # Installs the cdk cli on Codebuild
+                    'npm install -g snyk',
                     "pip install -r requirements.txt",  # Instructs Codebuild to install required packages
+                    'snyk auth $SNYK_TOKEN',
                     "cdk synth",
+                    'snyk iac test --report || echo "Snyk found vulnerabilities!"',
                 ]
+                env={
+                        'SNYK_TOKEN': snyk_secret.secret_value.unsafe_unwrap()
+                    }
             ),
         )
 
