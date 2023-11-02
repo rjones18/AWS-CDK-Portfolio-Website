@@ -11,4 +11,4 @@ Link to Website: https://rjportfoliosite.reggiestestdomain.com/
 
 The Website pipeline is broken down into the architecture below:
 
-![portfolio](https://github.com/rjones18/Images/blob/main/Portfolio-Website-Pipeline-Diagram.png)
+![portfolio](https://github.com/rjones18/Images/blob/main/Portfolio-Website-Pipeline-Diagram%20(1).png)
