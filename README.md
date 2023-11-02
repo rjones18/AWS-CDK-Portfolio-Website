@@ -1,5 +1,5 @@
 # AWS-CDK-Portfolio-Website
-In this project, I utilized a suite of advanced AWS technologies to deploy a personal portfolio website. I utilized the AWS Python Cloud Development Kit (CDK) to define the AWS resources needed to host the website. To ensure continuous delivery, I leveraged CodePipeline and CodeCommit to automatically deploy any updates to the website.
+In this project, I utilized a suite of advanced AWS technologies to deploy a personal portfolio website. I utilized the AWS Python Cloud Development Kit (CDK) to define the AWS resources needed to host the website. To ensure continuous delivery, I leveraged CodePipeline and CodeCommit to automatically deploy any updates to the website. I also incorporated tools like Snyk for Infrastructure as Code (IaC) scans.
 
 For website hosting, I stored the website files in an S3 bucket and leveraged Amazon CloudFront to distribute the content globally with low latency. To provide a custom domain name, I configured Route 53 and integrated Amazon Certificate Manager to provide secure SSL/TLS encryption for the website.
 
